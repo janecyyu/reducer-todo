@@ -1,38 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+h1{
+  font-family: 'Girassol', cursive;
+  border: 1px dotted wheat;
+  padding: 10px;
+}
+
+
 .App {
   text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height:100vh;
+  padding:5%;
+}
+h3{
+  margin:50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  height:2.5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 67%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

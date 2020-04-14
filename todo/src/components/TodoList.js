@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from "react";
 import reducer from "../reducer/reducer";
 import initialState from "../reducer/initialState";
+import { Button } from 'reactstrap';
 
 const TodoList = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -32,7 +33,7 @@ const TodoList = () => {
   };
 
   return (
-    <div>
+    <div className="content">
       <div>
         {state.map((todo) => (
           <h3
@@ -48,23 +49,23 @@ const TodoList = () => {
           </h3>
         ))}
       </div>
-      <form onSubmit={submit}>
+      <form className="form" onSubmit={submit}>
         <input
           type="text"
           placeholder="add something"
           value={newTitleText}
           onChange={handleChanges}
         />
-        <button
+        <Button
           onClick={() => {
             dispatch(addTodo(newTitleText), setNewTitleText(""));
           }}
         >
           Add Todo
-        </button>
-        <button onClick={()=>dispatch({ type: "CLEAR_TOGO"})}>
+        </Button>
+        <Button color="warning" onClick={()=>dispatch({ type: "CLEAR_TOGO"})}>
           Clear Completed
-        </button>
+        </Button>
       </form>
     </div>
   );
